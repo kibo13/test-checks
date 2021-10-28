@@ -24,7 +24,7 @@
             <tr>
                 <td>{{ $i+=1 }}</td>
                 <td>{{ $check->user->name }}</td>
-                <td>{{ $check->photo }}</td>
+                <td>{{ hideImage($check->photo) }}</td>
                 <td>{{ $check->type }}</td>
                 <td>{{ getFormatDate($check->created_at) }}</td>
                 <td>{{ $check->code }}</td>
