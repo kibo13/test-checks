@@ -20,7 +20,7 @@ php artisan key:generate
 
 # create a new mysql database via phpmyadmin or GUI
 # import to created database file
-static/database.sql
+static/db_checks.sql
 
 # database configuration
 DB_CONNECTION=mysql

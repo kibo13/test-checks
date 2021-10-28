@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Check;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CheckController extends Controller
 {
@@ -15,6 +16,14 @@ class CheckController extends Controller
 
     public function create(Request $request)
     {
-        dd($request);
+        $params = [
+            'user_id'   => Auth::user()->id,
+            'photo'     => $request->file('photo')->store('checks'),
+            'type'      => 1,
+            'code'      => 'test',
+            'status'    => 1
+        ];
+
+        Check::create($params);
     }
 }

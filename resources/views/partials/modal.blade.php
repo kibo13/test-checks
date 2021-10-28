@@ -6,7 +6,7 @@
     aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
 
             <div class="modal-header">
@@ -20,18 +20,27 @@
                 </button>
             </div>
 
-            <div class="modal-body">
-                <input type="file" class="form-control-file" id="check-img">
-            </div>
+            <form id="form-upload-file" enctype="multipart/form-data">
+                @csrf
 
-            <div class="modal-footer">
-                <button id="upload-btn" class="btn-sm btn-success mr-0">
-                    Загрузить
-                </button>
-                <button class="btn-sm btn-secondary" data-dismiss="modal">
-                    Отмена
-                </button>
-            </div>
+                <div class="modal-body">
+                    <input
+                        type="file"
+                        class="form-control-file"
+                        id="check-photo"
+                        name="photo"
+                        accept=".jpg, .jpeg, .png">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" id="upload-btn" class="btn-sm btn-success mr-0">
+                        Загрузить
+                    </button>
+                    <button type="button" class="btn-sm btn-secondary" data-dismiss="modal">
+                        Отмена
+                    </button>
+                </div>
+            </form>
 
         </div>
     </div>
