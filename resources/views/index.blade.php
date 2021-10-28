@@ -4,6 +4,11 @@
 <div class="container">
     <h5 class="mb-2">Список загруженных чеков</h5>
 
+    @if ($checks->count() == 0)
+    <p class="text-info">
+        Записи отсутствуют
+    </p>
+    @else
     <table class="table table-bordered table-responsive">
         <thead class="thead-light">
             <th>#</th>
@@ -28,6 +33,7 @@
             @endforeach
         </tbody>
     </table>
+    @endif
 
 </div>
 @endsection
