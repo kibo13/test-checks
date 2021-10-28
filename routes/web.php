@@ -1,9 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CheckController;
 
-Auth::routes();
+Auth::routes([
+    'reset' => false,
+    'verify' => false,
+    'confirm' => false
+]);
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [CheckController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function () {
+    Route::post('check/create', [CheckController::class, 'create'])->name('check.create');
+});

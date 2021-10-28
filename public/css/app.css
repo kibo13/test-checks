@@ -10004,3 +10004,15 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.bk-navbar {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .bk-navbar {
+    margin-top: 10px !important;
+    align-items: flex-start;
+  }
+}

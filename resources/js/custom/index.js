@@ -1,0 +1,2 @@
+// components
+require('./components/navbar')
