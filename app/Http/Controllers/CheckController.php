@@ -15,6 +15,6 @@ class CheckController extends Controller
 
     public function create(Request $request)
     {
-        // return view('form');
+        dd($request);
     }
 }

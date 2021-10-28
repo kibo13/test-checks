@@ -27,18 +27,25 @@
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">
+                                {{ __('Login') }}
+                            </a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">
+                                {{ __('Register') }}
+                            </a>
                         </li>
                     @endif
                 @else
                     <li>
-                        <button class="btn-sm btn-primary bk-navbar__download">
+                        <button
+                            class="btn-sm btn-primary bk-navbar__download"
+                            data-toggle="modal"
+                            data-target="#bk-form-modal">
                             Загрузить чек
                         </button>
                     </li>

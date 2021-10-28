@@ -28,5 +28,7 @@
             @yield('content')
         </main>
     </div>
+
+    @include('partials.modal')
 </body>
 </html>
