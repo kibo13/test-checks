@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    Welcome to page
+    {{ sayHello() }}
 </div>
 @endsection
