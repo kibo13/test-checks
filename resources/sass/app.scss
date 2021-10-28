@@ -1,14 +1,16 @@
 // fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
-// variables
-@import "variables";
-
-// bootstrap
-@import "~bootstrap/scss/bootstrap";
-
 // utils
+@import "utils/variables";
 @import "utils/zoom";
+
+// vendors
+@import "~bootstrap/scss/bootstrap";
+@import "vendors/datatable";
 
 // partials
 @import "partials/navbar";
+
+// pages
+@import "pages/checks";

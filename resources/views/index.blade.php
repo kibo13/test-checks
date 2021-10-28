@@ -1,15 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div class="container bk-page bk-checks">
     <h5 class="mb-2">Список загруженных чеков</h5>
 
     @if ($checks->count() == 0)
-    <p class="text-info">
-        Записи отсутствуют
-    </p>
+    <p class="text-info">Записи отсутствуют</p>
     @else
-    <table class="table table-bordered table-responsive">
+    <table class="bk-table table table-bordered table-responsive">
         <thead class="thead-light">
             <th>#</th>
             <th style="min-width: 200px;">Пользователь</th>
