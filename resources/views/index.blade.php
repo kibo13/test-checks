@@ -21,7 +21,7 @@
                 <td>{{ $check->user->name }}</td>
                 <td>{{ $check->photo }}</td>
                 <td>{{ $check->type }}</td>
-                <td>{{ $check->created_at }}</td>
+                <td>{{ getFormatDate($check->created_at) }}</td>
                 <td>{{ $check->code }}</td>
                 <td>{{ $check->status }}</td>
             </tr>
