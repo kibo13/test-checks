@@ -7,10 +7,18 @@ function getFormatUser($name)
 {
     $fio = explode(' ', $name);
 
-    $first_name = $fio[0];
-    $last_name = $fio[2];
+    $count = count($fio);
 
-    return $first_name . ' ' . $last_name;
+    if ($count > 1) {
+        $first_name = $fio[0];
+        $last_name = $fio[2];
+
+        return $first_name . ' ' . $last_name;
+    } else {
+        $first_name = $fio[0];
+
+        return $first_name;
+    }
 }
 
 function getRandomUserId()
