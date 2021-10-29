@@ -21,7 +21,7 @@
             @foreach($checks as $i => $check)
             <tr>
                 <td>{{ $i+=1 }}</td>
-                <td>{{ $check->user->name }}</td>
+                <td>{{ getFormatUser($check->user->name) }}</td>
                 <td>{{ hideImage($check->photo) }}</td>
                 <td>@if ($check->type == 1) Призовой @else Обычный @endif</td>
                 <td>{{ getFormatDate($check->created_at) }}</td>

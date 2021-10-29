@@ -59,7 +59,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                             v-pre>
-                            {{ Auth::user()->name }}
+                            {{ getFormatUser(Auth::user()->name) }}
                         </a>
 
                         <div class="p-0 dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
