@@ -18,13 +18,15 @@ class CheckFactory extends Factory
         $type   = rand(0, 1);
         $code   = getCodeCheck($type);
         $status = rand(0, 1);
+        $date   = getRandomDate();
 
         return [
-            'user_id'   => $user,
-            'photo'     => $photo,
-            'type'      => $type,
-            'code'      => $code,
-            'status'    => $status
+            'user_id'    => $user,
+            'photo'      => $photo,
+            'type'       => $type,
+            'code'       => $code,
+            'status'     => $status,
+            'created_at' => $date
         ];
     }
 }

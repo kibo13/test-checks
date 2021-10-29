@@ -10,7 +10,7 @@ class CheckController extends Controller
 {
     public function index()
     {
-        $checks = Check::get();
+        $checks = Check::orderBy('created_at', 'desc')->get();
         return view('index', compact('checks'));
     }
 
