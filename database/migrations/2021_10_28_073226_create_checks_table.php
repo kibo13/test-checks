@@ -18,7 +18,7 @@ class CreateChecksTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->text('photo');
             $table->tinyInteger('type')->default(0);
-            $table->string('code');
+            $table->string('code')->nullable();
             $table->tinyInteger('status');
             $table->timestamps();
         });

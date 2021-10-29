@@ -23,10 +23,10 @@
                 <td>{{ $i+=1 }}</td>
                 <td>{{ $check->user->name }}</td>
                 <td>{{ hideImage($check->photo) }}</td>
-                <td>{{ $check->type }}</td>
+                <td>@if ($check->type == 1) Призовой @else Обычный @endif</td>
                 <td>{{ getFormatDate($check->created_at) }}</td>
-                <td>{{ $check->code }}</td>
-                <td>{{ $check->status }}</td>
+                <td>{{ getFormatCode($check->code) }}</td>
+                <td>@if ($check->type == 1) Принят @else Отклонен @endif</td>
             </tr>
             @endforeach
         </tbody>

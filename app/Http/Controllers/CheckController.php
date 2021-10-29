@@ -16,12 +16,18 @@ class CheckController extends Controller
 
     public function create(Request $request)
     {
+        $user   = Auth::user()->id;
+        $photo  = $request->file('photo')->store('checks');
+        $type   = getTypeCheck();
+        $code   = getCodeCheck();
+        $status = getStatusCheck($photo);
+
         $params = [
-            'user_id'   => Auth::user()->id,
-            'photo'     => $request->file('photo')->store('checks'),
-            'type'      => 1,
-            'code'      => 'test',
-            'status'    => 1
+            'user_id'   => $user,
+            'photo'     => $photo,
+            'type'      => $type,
+            'code'      => $code,
+            'status'    => $status
         ];
 
         Check::create($params);
