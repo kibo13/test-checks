@@ -43,6 +43,18 @@ function getFormatCode($code)
     return $output;
 }
 
+function getActiveCheck($date, $code)
+{
+    $last_week    = Carbon::create($date)->addHour(6)->startOfWeek();
+    $current_week = Carbon::now()->addHour(6)->startOfWeek();
+
+    if ($last_week == $current_week) {
+        return getFormatCode($code);
+    } else {
+        return 'Не учавствует на этой неделе';
+    }
+}
+
 function getStatusCheck($photo)
 {
     return is_null($photo) ? 0 : 1;
