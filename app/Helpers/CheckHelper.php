@@ -17,10 +17,8 @@ function getTypeCheck()
     }
 }
 
-function getCodeCheck()
+function getCodeCheck($type)
 {
-    $type = getTypeCheck();
-
     if ($type == 1) {
         return strtoupper(Str::random(8));
     }

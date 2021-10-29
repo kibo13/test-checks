@@ -19,7 +19,7 @@ class CheckController extends Controller
         $user   = Auth::user()->id;
         $photo  = $request->file('photo')->store('checks');
         $type   = getTypeCheck();
-        $code   = getCodeCheck();
+        $code   = getCodeCheck($type);
         $status = getStatusCheck($photo);
 
         $params = [

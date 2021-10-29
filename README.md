@@ -18,9 +18,7 @@ copy .env.example .env
 # generate a key
 php artisan key:generate
 
-# create a new mysql database via phpmyadmin or GUI
-# import to created database file
-static/db_checks.sql
+# create database via phpmyadmin or GUI
 
 # database configuration
 DB_CONNECTION=mysql
@@ -30,6 +28,12 @@ DB_DATABASE=database_name
 DB_USERNAME=database_username
 DB_PASSWORD=database_password
 
+# fetch tables with data
+php artisan migrate --seed
+
 # run application
 php artisan serve
+
+# if you need rollback and re-run all
+php artisan migrate:refresh --seed
 ```
